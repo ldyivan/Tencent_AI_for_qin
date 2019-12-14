@@ -340,13 +340,15 @@
             } else {
                 chat_ul.innerHTML += '<li><img src="./img/img_17.jpg"><span>' + send_txt.value + '</span>';
                 now++;
-                if (num%2 == 0) {
+                if (num == 0) {
                     chat_span[now].className = 'spanright';
                     chat_img[now].className = 'imgright';
+                    num = 1;
                 }
                 else {
                     chat_span[now].className = 'spanleft';
                     chat_img[now].className = 'imgleft';
+                    num = 0;
                 }
 
                 // 内容过多时,将滚动条放置到最底端
